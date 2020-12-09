@@ -20,3 +20,5 @@ Repository containing Data Science and Data Analytics projects.
 * Simulating a real-world scenario with Python: Comparing different checkout configuration and providing recommendation on the quickest checkout service.
 * Tools: 
    - **Python**: modsim
+
+![](/images/Express Checkout.png)
