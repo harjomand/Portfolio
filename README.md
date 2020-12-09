@@ -17,6 +17,6 @@ Repository containing Data Science and Data Analytics projects.
 
 ## Simulation 
 ### [Project4: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
-* Simulating a real-world scenario with Python. Comparing different checkout configuration and providing recommendation on the quickest checkout service.
+* Simulating a real-world scenario with Python: Comparing different checkout configuration and providing recommendation on the quickest checkout service.
 * Tools: 
    - **Python**: modsim
