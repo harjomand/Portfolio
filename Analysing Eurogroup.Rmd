@@ -1,0 +1,221 @@
+---
+title: "EuroGroup"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+---
+# Overview 
+The data file ‘europegroup.txt’ contains data for the percentage of employment by country (n=30 countries). 
+The first variable identifies the region of the country (Group) and the next nine variables represent different employment sectors: 
+AGR=agriculture, forests and fishing; 
+MIN=mining; 
+MAN=manufacturing; 
+PS=power and water supplies; 
+CON=construction; SER=services; 
+FIN=finance; SPS=social and personal services; 
+TC=transport and communication. 
+
+## Structure of the data: 
+```{r}
+#read and preview data
+eg <- read.table("C:/Users/arjom/OneDrive/Desktop/Github projects/Multivariate Analysis for High-Dimensional Data/1/europegroup.txt" , header = TRUE)
+str(eg)
+attach(eg)
+```
+
+The data consists of measurements of 30 cases (countries) and 10 variables. The Group variable is a factor with 4 levels describing the region of the country. The other nine variables are numerical measuring %employment in 9 different employment sectors. No missing data. 
+
+## Univariate QQ plots, histograms and univariate Shapiro-Wilks tests of normality for each of the nine employment variables: 
+
+```{r}
+library(MVN)
+mvn(eg[,2:10],univariatePlot="histogram")
+mvn(eg[,2:10], univariateTest="SW",univariatePlot="qqplot")
+
+```
+
+The first 4 variables are not UVN while the last 4 are according to the SW tests. From the histograms and QQplots AGR, MIN and PS are all skewed right while MAN appears to have very heavy tails and may be bimodal. Based on the S west both AGR and MIN are equally significantly deviating from normality (p<0.001) however, MIN has the lowest test statistic (SW=0.427) and the QQplot shows that it is most strongly right skewed and the histogram shows that nearly all observations are clumped together at the lower end with just a few large outliers
+
+## Checking the perspective and contour plots for the SER and FIN variables: 
+```{r}
+#perspective and contour plots for FIN and SER
+par(mfrow = c(1,2))
+mvn(eg[,7:8], multivariatePlot="persp")
+mvn(eg[,7:8], multivariatePlot="contour")
+par(mfrow = c(1,1))
+
+```
+
+Both variables were UVN however they are not jointly MVN. Their joint distribution looks like it has one main peak at the centre of the distribution for FIN, but slightly off-centre for SER. There is also a second peak ‘in front’ the first and both the perspective and the contour plot show that the ‘valley’ between the two peals is relatively deep. The joint distribution is quite ‘peaked’ or leptopkurtic rather than platykurtic (flat).
+The inherent problem with these plots is that they only consider bivariate normality between 2 selected variables at a time from the dataset, not MVN of the whole dataset.
+
+## Appluing Mardia, Henze-Zirkler and Royston tests of MVN based on all nine employment variables:
+
+
+```{r}
+mvn(eg[,2:10], mvnTest="mardia", desc=FALSE, multivariatePlot="qq")
+```
+
+The Chi-Square QQ plot : The joint distribution of all 4 variables does not appear to be MVN from the Chi-square QQ plot – countries with larger mahalanobis distances deviate most from expected. 
+
+Mardia’s MVN for skew is highly significant (p<0.0001) indicating significant deviation from expected under MVN. The kurtosis statistic is also significant (p>0.01), suggesting that kurtosis (peakedness) or lack of, is also a problem in the MV distribution.
+Note: kurtosis p-value is < 0.05 means the distribution is significantly different from normal –i.e. there is excessive kurtosis. Platykurtic distributions have negative excessive kurtosis (tests statistic is negative) because they are too flat. Leptokurtic distributions have positive excessive kurtosis because they are too peaked (test statistic is positive)
+Overall the Mardia’s test suggests that there is significant deviation from MVN.
+
+```{r}
+mvn(eg[,2:10], mvnTest="hz", desc=FALSE)
+mvn(eg[,2:10], mvnTest="royston", desc=FALSE)
+
+```
+
+Both the HZ and Royston tests also conclude that there is significant deviation from MVN.
+
+
+## One way to try and meet the MVN assumption could be to remove some of the variables from the multivariate analysis. Let's check if the data is MVN if only those variables that are univariate normal (UVN) are used: 
+
+```{r}
+mvn(eg[,7:10], mvnTest="mardia", desc=FALSE)
+```
+
+The data is still not MVN. Just because variables are UVN there is no expectation that they will also be jointly MVN, so this outcome is reasonable.
+
+## Daftsman display for the employment variables. I plot the observations grouped by regional group. I also include smoothing, regression lines, or distribution curves in the diagonal panels of the plot: 
+```{r}
+# Plot draftsman
+library(car)
+scatterplotMatrix(eg[7:10], groups=eg$Group, smooth=FALSE, regLine=FALSE, diagonal=FALSE)
+```
+
+There is one Eastern (dark blue) country that has a much higher FIN value and lower values for SER, SPS and TC. Looking back at the original data this is country 19. While there is a fair bit of overlap between regions (Groups) it also looks like there is some separation between regions (colours) in the bivariate relationships, particularly between Eastern and EU. Eastern countries tend to have lower SER and FIN (except country 19) and higher TC.
+
+## Trying MANOVA: 
+
+The 4 dependent variables are SER, FIN, SPS AND TC which measure the percentage employment within each of these 4 employment sectors for 30 countries. The independent variable is Group which is a factor that represents the country regions. The MANOVA tests whether there is a difference between the vector of dependent variable means among the country groups based on the ratio of between and within group variances among the dependent variables.
+
+## Testing for for differences in ‘percentage of employment’ between the four country regions using MANOVA:
+
+```{r}
+eg.manova1<-manova(cbind(SER,FIN,SPS,TC) ~ factor(Group), data=eg)
+summary(eg.manova1) #default test is Pillai's
+summary(eg.manova1, test="Wilks")
+summary(eg.manova1, test="Roy")
+summary(eg.manova1, test="Hotelling-Lawley")
+
+```
+
+Assuming MVN distribution and equal covariance matrices, Pillai’s, Wiks’, Roys’ and Hotelling’s statistics are all significant (p<0.001) indicating that at least two of the three country regions (Groups) differ significantly in composition of their percent employment across the four employment sectors 
+
+## Comparing each of the regions (Group) with each other using Hotelling’s T2 test and a significance level of 0.05 : 
+
+| Comparison  | Hotelling’s p-value | Significant (Y/N) | Significant after correction (Y/N) |
+|---------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
+| EU-EFTA | 0.249 | No | No |
+EU-Eastern| 2.253e-07 | Yes | Yes |
+EU-Other |0.5728 | No | No | 
+EFTA-Eastern | 0.0001096| Yes  | Yes | 
+EFTA-Other |0.02368| Yes | No |
+Eastern-Other | 0.07146 | No | No |
+
+These sample sizes are quite unbalanced with the biggest difference between EU (n=12) and Other (n=4) countries. MANOVA and Hotelling’s T2 t-test are fairly robust to deviations from MVN and equal covariance when sample sizes are roughly equal. The sample size differences in this analysis could have caused issues with the significance tests. However, the comparison between EU and Other is non-significant. Two of the significant comparisons are highly significant (p<0.0001), which would indicate that there is strong evidence for the distinction between these regions. The third significant comparison between EFTA v Other becomes non-significant once the correction for multiple testing is applied. Therefore, the lack of MVN is unlikely to be of concern when interpreting the significant results (i.e. Type I error not a concern) but the lack of MVN may have led to erroneous non-significant results (Type II error)
+
+
+## Checking correlation and covariance matrices. 
+```{r}
+(egcov<-round(cov(eg[,7:10]), digits=2))
+(egcor<-round(cor(eg[,7:10]), digits=2))
+
+```
+
+The covariance matrix is calculated based on data where the mean of each variable is subtracted from each observation in that variable. This centres each variable around a mean of 0.
+The correlation matrix is calculated based on data where the centred values are divided by the relevant variable standard deviation. This gives a unit variance (variance=1) within each variable.
+There can be a benefit in centring and standardising variables if the MV dataset is made up of variables measured on very different scales (units) or measured on similar scales but with very different magnitudes of variances – disparity in scale and variance can lead to one (or a few) variables dominating analysis).
+In the correlation matrix values have been centred and standardised, but only centred in the covariance matrix.
+The europegroup dataset contains variables measured in the same units (% employed) however the range of values varies quite a bit among countries, so the covariance matrix would not be appropriate for PCA analysis.
+The much larger variance of the variable ‘SPS’ in the covariance matrix (76.25) compared to TC (1.52) is an example of the scale of one variable potentially overwhelming the effect of another variable.
+Overall the correlations between variables are moderate to low (less than 0.47) indicating that PCA may not return very informative results. There two negative correlations between TC and SER and FIN
+
+## PCA analysis on the 4 employment variables using the prcomp function:
+```{r}
+(eg.prcomp <- prcomp(eg[,7:10], center=TRUE, scale=TRUE ))
+names(eg.prcomp)
+
+#eigen values
+(eigen<-(eg.prcomp$sdev)^2)
+
+
+# %variance
+(pervar<-((eg.prcomp$sdev^2/sum(eg.prcomp$sdev^2))*100))
+
+(cumsum<-cumsum(pervar))
+
+#Screeplot
+screeplot(eg.prcomp, type="lines")
+
+```
+
+The first 2 PC’s have eigen values>1 and explain 79.3% of the total variance. The scree plot shows an elbow at 3 PC’s which would also indicate interpreting only the first 2 PCs Reducing dimensions (the overall purpose of PCA) from 4 to 2 is quite a good result while maintaining a substantial %var explained.
+
+## Interpreting the first PC:
+
+Z1 = 0.6537(SER) + 0.5561(FIN) + 0.5110(SPS) - 0.0481(TC)
+
+On PC1 SER, FIN and SPS are all moderately positively correlated, while TC is weakly negatively correlated with the other 3 variables. This suggests that the services (SER) sector, the financial sector (FIN) and the social and personal services sector (SPS) all have relatively similar values across countries, while employment percentages in the transport and communications sector is not strongly related to these sectors and does not contribute to the overall % variation explained by this PC.
+It is important to note that this PC explains only 40.8% of the total variation so caution should be applied to the above interpretation.
+
+## Checking the correlation between the first and second PCs: 
+```{r}
+cor(eg.prcomp$x[,1],eg.prcomp$x[,2])
+```
+
+The correlation coefficient is practically zero confirming that the two PCs are orthogonal.
+
+## Biplot based on the first 2 PCs:
+```{r}
+biplot(eg.prcomp,cex=c(1,0.7))
+
+```
+
+The biplot shows each of the countries by number in the main plot space. The red vectors indicate the influence of the original variables on the position of countries within the 2D space.
+From the biplot we can see that TC is associated strongly with PC2 – countries close to the top of the plot are associate with high values of TC. SER is most influential along PC1. Country 19 is associated with the lowest values of TC, SER and SPS and the highest value of FIN. Country 9, in contrast, has moderate to high values for all 4 variables.
+
+
+## Performing a Factor Analysis using the factanal function: 
+
+```{r}
+#factanal function using 1 factor and no rotation
+(eg.fa3 <- factanal(eg[,7:10], factors=1, rotation="none" ))
+```
+
+There are 6 combinations or 6 df available at start.
+
+For F1 we need 1 df for the eigen value and 3 df for the eigen vector (4-1) leaving 6-4=2 df. For F2 we need 1 df for the eigen value and 2df for the eigen vector (3-1) leaving 2-3= -1 df. Therefore, the maximum number of factors we can fit and still rn the chi-sq test is 1 factor.
+
+```{r}
+print(eg.fa3$loadings,cutoff=0.5)
+```
+
+The 1 factor explains 35% of the total variance which is not very good. The chi-square goodness of fit test also indicates that the model deviates significantly from the data (p<0.00126) which suggests that the unexplained variance is important, and interpretation of the 1 factor model may not accurately reflect the original data.
+Only the SPS variable has a loading >0.5 on this factor and at 0.997 this factor is explaining almost all the variance associated with SPS. In comparison the loadings for TC is only moderate at 0.475.
+The uniqueness is the proportion of variance for a variable not explained by the factor model. For SPS has very little left unexplained by the factor (0.005) while FIN is nerly completely unexplained by the factor (0.973).
+
+
+## d) Parallel analysis using 500 iterations: 
+An alternative way to determine the number of factors to interpret is to compare the solution to normally distributed random data with the same properties as the real data set - that is the same number of original variables and the same number of cases (sample size). We can produce the expected eigen values from an ‘ideal’ sample and if we do this multiple times, say 500 simulations, we can get a distribution of possible eigen values for each component/factor; each with a mean, SD and 95 percentile value. If our ‘real data’ eigen value is greater than the 95 percentile value we can be confident our factor is a well supported factor.
+
+```{r}
+library(psych) 
+set.seed(245)
+pa<-fa.parallel(eg[,7:10], fm="ml", fa="pc", n.iter=500)
+pa$pc.values
+pa$pc.sim
+pa.out<-pa$values
+quants <- c(0.95)
+(pa_95quant<-apply( pa.out[,5:8], 2 , quantile , probs = quants ))
+
+```
+Parallel analysis suggests that the number of factors =  NA  and the number of components =  0 . 
+The analysis recommends that no factors be used - FA is not appropriate for this data. The scree plot shows that the observed eigen values for the first 2 components (1.632 and 1.540) are both greater than the mean of the simulated data sets (1.421 and 1.097). However, there is quite a bit of variation in the simulated data sets, creating large standard deviations around the means. The 95th percentile value for component 1 (1.665) is greater than the observed eigen value. Interestingly the 95th percentile value for component 2 (1.256) is below the observed eigen value, however since the first component is not feasible we cannot consider the second component.
+
+
