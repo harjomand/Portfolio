@@ -9,10 +9,10 @@ Data Science Portfolio. Repository containing Data Science and Data Analytics pr
 
 ## Data Analysis with R
 ### [Project 1: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/) 
-* Multivariate Analysis for High-Dimensional Data
-* Applying MANOVA, PCA Analysis, Factor Analysis and Parallel analysis on dependent variables which measure the percentage employment within different employment sectors. The independent variable is Group which is a factor that represents the country regions. 
+* Multivariate Analysis for High-Dimensional Data . Applying MANOVA, PCA Analysis, Factor Analysis and Parallel analysis on dependent variables which measure the percentage employment within different employment sectors. The independent variable is Group which is a factor that represents the country regions. 
 
-* Techniques: MANOVA, PCA Analysis, Factor Analysis and Parallel analysis 
+* Techniques: 
+   - MANOVA, PCA Analysis, Factor Analysis and Parallel analysis 
 * Tools : 
    - **R**: MVN,car,psych
    
