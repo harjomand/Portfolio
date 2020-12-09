@@ -21,4 +21,4 @@ Repository containing Data Science and Data Analytics projects.
 * Tools: 
    - **Python**: modsim
 
-![](/images/Express_Checkout.PNG)
+![](/images/Express_Checkout_.PNG)
