@@ -2,6 +2,17 @@
 Data Science Portfolio. 
 Repository containing Data Science and Data Analytics projects. 
 
+
+Tools
+  - **Python**: NumPy, Pandas, Seaborn, Matplotlib
+  - **Machine Learning**: scikit-learn, TensorFlow, keras
+
+## Contents
+- ## Machine Learning
+    - [Data Science](https://github.com/harjomand/test/blob/main/11111-Python%20WooorkBoo11k.ipynb)
+    
+  
+
 ## Machine Learning with Python
 ### [Project 1: Data Science Ames Housing Data - Feature Engineering](https://github.com/) 
 
