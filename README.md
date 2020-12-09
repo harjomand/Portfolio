@@ -20,9 +20,8 @@ Data Science Portfolio. Repository containing Data Science and Data Analytics pr
 * Tools: 
    - **Python**: modsim
 
-![](/images/Express_Checkout_.PNG)
 ![](/images/Express_Checkout.PNG)
-![](/images/Express_Checkout_VS_One_Queue_One_Station.PNG)
+
 
 
 
