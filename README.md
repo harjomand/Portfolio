@@ -1,6 +1,5 @@
 # Portfolio
-Data Science Portfolio. 
-Repository containing Data Science and Data Analytics projects. 
+Data Science Portfolio. Repository containing Data Science and Data Analytics projects. 
 
 ## Machine Learning with Python
 ### [Project 1: Data Science Ames Housing Data - Feature Engineering](https://github.com/) 
