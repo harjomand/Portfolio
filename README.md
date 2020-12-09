@@ -10,3 +10,4 @@ Repository containing Data Science and Data Analytics projects.
 
 ### Data-Analysis-with-R
 Exploratory Data Analysis Projects Using R. All source code can be found here.
+[Project 3: Data Science Ames Housing Data - Feature Engineering](https://github.com/) 
