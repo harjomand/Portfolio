@@ -40,6 +40,11 @@ normality.
    - **Python**: modsim
 
 ![](/images/Express_Checkout.PNG)
+}
+
+img.two {
+  height: 50%;
+  width: 50%;
 
 
 
