@@ -7,16 +7,28 @@ Repository containing Data Science and Data Analytics projects.
 
 * Results: The benchmark was Logistic regression and it produced 0.7694 AUC on Test dataset. By utilizing the Random Forest and hyper tuning the parameters, the 0.8025 AUC was achieved. So, the hyper tuning results a better performance.
 
-
 * Techniques: 
    - Supervised Machine Learning : Logistic Regression, Decision Tree,Random Forest
 * Tools : 
    - **Python**: Pandas,Numpy,Sklearn,Matplotlib,Seaborn
 
+![](/images/Correlation.PNG)
+
+
+## Multilayer Perceptrons with Python
+### [Project 2: How to Identify Potential Cross-sell And Up-sell Customers?](https://github.com/harjomand/Portfolio/blob/main/MLP.ipynb) 
+* Explanatory data analytics , Feature Engineering , MLP 
+
+* Results: The benchmark was 0.7694 for this project. The MLP model beat the benchmark but did not beat the Random Forest.
+
+* Techniques: 
+   - Neural Networks
+* Tools : 
+   - **Python**: Pandas,Numpy,Sklearn,Matplotlib,Seaborn,Keras
+
 ![](/images/RandomForest.PNG)
 
 
-   
 ## Multivariate Analysis for High-Dimensional Data with R
 ### [Project 2: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/) 
 * Applying MANOVA, PCA Analysis, Factor Analysis and Parallel analysis on dependent variables which measure the percentage employment within different employment sectors. The independent variable is Group which is a factor that represents the country regions. 
