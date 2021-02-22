@@ -2,7 +2,7 @@
 Repository containing Data Science and Data Analytics projects. 
 
 ## Machine Learning with Python
-### [Project 1: How to Identify Potential Cross-sell And Up-sell Customers?](https://github.com/) 
+### [Project 1: How to Identify Potential Cross-sell And Up-sell Customers?](https://github.com/harjomand/Portfolio/blob/main/How%20to%20Identify%20Potential%20Cross-sell%20And%20Up-sell%20Customers.ipynb) 
 * Explanatory data analytics , Feature Engineering , Supervised Machine Learning (Logistic Regression, Decision Tree,Random Forest). 
 
 * Results: The benchmark was Logistic regression and it produced 0.7694 AUC on Test dataset. By utilizing the Random Forest and hyper tuning the parameters, the 0.8025 AUC was achieved. So, the hyper tuning results a better performance.
