@@ -2,7 +2,7 @@
 Repository containing Data Science and Data Analytics projects. 
 
 ## Machine Learning & Deep Learning - Python
-### [Project 1: How to Identify Potential Cross-sell And Up-sell Customers?](https://github.com/harjomand/Portfolio/blob/main/How%20to%20Identify%20Potential%20Cross-sell%20And%20Up-sell%20Customers.ipynb) 
+### [Project 1: How to Identify Potential Cross-sell And Up-sell Customers?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
 * Explanatory data analytics, Feature Engineering, Feature Importance, Supervised Machine Learning (Logistic Regression, Decision Tree, and Random Forest), Multilayer Perceptrons (MLP) in Keras, K-means, Autoencoder in Pytorch, and PCA .   
 * Benchmar: The benchmark was Logistic regression and it produced 0.7694 AUC on Test dataset.
 * Results: By utilizing Random Forest and hyper tuning the parameters, the 0.8025 AUC was achieved. 
