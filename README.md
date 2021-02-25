@@ -33,21 +33,18 @@ Repository containing Data Science and Data Analytics projects.
    
 
 ## Big Data - Spark - Python
-### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
-* By utilizing the Amazon Web Services a NoSQL database is created then the NoSQL database is queried and is analysed to answer the research question.  
+### [Project 3: How did the change in the movements in the transit stations has impacted the new Covid-19 cases in Brazil and Australia? ](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
+* A spark distributed dataframes is created . Spark is used to explore, filter, analyse two time-series. 
 
 * Techniques: 
-   - AWS Cloud
-   - NoSQL 
-   - PyMongo
+   - Spark
    
 * Tools: 
-   - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PyMongo 
+   - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PySpark
    
 
-
 ## Multivariate Analysis for High-Dimensional Data with R
-### [Project 2: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/harjomand/Portfolio/blob/main/Analysing-Eurogroup.pdf) 
+### [Project 4: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/harjomand/Portfolio/blob/main/Analysing-Eurogroup.pdf) 
 * Applying MANOVA, PCA Analysis, Factor Analysis and Parallel analysis on dependent variables which measure the percentage employment within different employment sectors. The independent variable is Group which is a factor that represents the country regions. 
 * Results: 
 
@@ -60,7 +57,7 @@ Repository containing Data Science and Data Analytics projects.
 
 
 ## Simulation with Python
-### [Project 3: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
+### [Project 5: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
 * Simulating a real-world scenario with Python: Comparing different checkout configuration and providing recommendation on the quickest checkout service.
 
 * Tools: 
@@ -70,7 +67,7 @@ Repository containing Data Science and Data Analytics projects.
 
 
 ## Simulation with Python
-### [Project 4: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20TooBike.ipynb)
+### [Project 6: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20TooBike.ipynb)
 * Simulating a real-world scenario with Python. 
 
 * Tools: 
