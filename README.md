@@ -85,7 +85,7 @@ Repository containing Data Science and Data Analytics projects.
 ![](/images/Express_Checkout.PNG)
 
 
-### [Project 6: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20TooBike.ipynb)
+### [Project 6: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20Bike.ipynb)
 * Simulating a real-world scenario with Python. 
 
 * Tools: 
