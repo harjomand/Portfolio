@@ -53,7 +53,10 @@ Repository containing Data Science and Data Analytics projects.
 * Results: Parallel analysis suggests that the number of factors = NA and the number of components = 0 . The analysis recommends that no factors be used - FA is not appropriate for this data. The scree plot shows that the observed eigen values for the first 2 components (1.632 and 1.540) are both greater than the mean of the simulate data sets (1.421 and 1.097). However, there is quite a bit of variation in the simulated data sets, creating large standard deviations around the means. The 95th percentile value for component 1 (1.665) is greater than the observed eigen value. Interestingly the 95th percentile value for component 2 (1.256) is below the observed eigen value, however since the first component is not feasible we cannot consider the second component.
 
 * Techniques: 
-   - Multivariate Analysis Of Variance (MANOVA), Principal Component Analysis (PCA), Factor Analysis, and Parallel Analysis 
+   - Multivariate Analysis Of Variance (MANOVA)
+   - Principal Component Analysis (PCA)
+   - Factor Analysis, and Parallel Analysis 
+   
 * Tools : 
    - **R**: MVN,car, and psych
    
@@ -64,7 +67,10 @@ Repository containing Data Science and Data Analytics projects.
 * Results: I realized that there are a range of correlations (all positive) within and between psychological and the academic variables sets. They all have moderate correlation.Also, we realized that students who have less control and motivation are associated with students who have low academics in english , maths , history and biology. But the analysis really has not been that successful and possibly those initial correlation matrices should warn us because we had a lot of really low correlation in the Psychological matrix which was a concern. Its possible that our assumption of MVN was a mistake and maybe if we test, it won’t fit a Multivariate normality.
 
 * Techniques: 
-   - Canonical Correlation Analysis (CCA) , Discriminant Function Analysis (DFA) , and Cluster Analysis
+   - Canonical Correlation Analysis (CCA) 
+   - Discriminant Function Analysis (DFA) 
+   - and Cluster Analysis
+   
 * Tools : 
    - **R**: yacca,lattice,caret,MASS, and ade4
    
