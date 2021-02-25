@@ -17,16 +17,17 @@ Repository containing Data Science and Data Analytics projects.
    - **Python**: Pandas,Numpy,Sklearn,Matplotlib,Seaborn,Keras,and Pytorch 
    
 ![](/images/RandomForest.PNG)
-                            *************************************
+
+
 ## Big Data 
 ### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/Covid-19-Melbourne.ipynb) 
-* By utilizing the Amazon Web Services a NoSQL database is created then the NoSQL database is queried and is analysed to answer the research question.  
+* By utilizing the Amazon Web Services (AWS) a NoSQL database is created . The NoSQL database is queried and is analysed to answer the research question.  
 * Results: People really obeyed the rules in Melbourne and as the result of that the restrictions were eases on 26th of October 2020. I saw a rapid drop in March and June in all different sections. People followed the rule, practiced social distancing and avoided optional and not important travels.
 
 * Techniques: 
    - AWS Cloud
    - NoSQL 
-   - PyMongo
+   - MongoDB
    
 * Tools: 
    - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PyMongo 
@@ -45,8 +46,10 @@ Repository containing Data Science and Data Analytics projects.
    - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PySpark
   
 ![](/images/Aus_Br.PNG)
-                                                         ******************
- 
+
+
+
+
 ## Multivariate Analysis for High-Dimensional Data with R
 ### [Project 4: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/harjomand/Portfolio/blob/main/Analysing-Eurogroup.pdf) 
 * Applying MANOVA, PCA Analysis, Factor Analysis and Parallel analysis on dependent variables which measure the percentage employment within different employment sectors. The independent variable is Group which is a factor that represents the country regions. 
@@ -55,7 +58,8 @@ Repository containing Data Science and Data Analytics projects.
 * Techniques: 
    - Multivariate Analysis Of Variance (MANOVA)
    - Principal Component Analysis (PCA)
-   - Factor Analysis, and Parallel Analysis 
+   - Factor Analysis
+   - Parallel Analysis 
    
 * Tools : 
    - **R**: MVN,car, and psych
@@ -69,11 +73,12 @@ Repository containing Data Science and Data Analytics projects.
 * Techniques: 
    - Canonical Correlation Analysis (CCA) 
    - Discriminant Function Analysis (DFA) 
-   - and Cluster Analysis
+   - Cluster Analysis
    
 * Tools : 
    - **R**: yacca,lattice,caret,MASS, and ade4
    
+
 
 ## Simulation with Python
 ### [Project 6: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
