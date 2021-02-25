@@ -20,7 +20,7 @@ Repository containing Data Science and Data Analytics projects.
 ![](/images/RandomForest.PNG)
 
 ## Big Data - NoSQL Database - Python
-### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
+### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/Covid-19-Melbourne.ipynb) 
 * By utilizing the Amazon Web Services a NoSQL database is created then the NoSQL database is queried and is analysed to answer the research question.  
 
 * Techniques: 
@@ -31,9 +31,10 @@ Repository containing Data Science and Data Analytics projects.
 * Tools: 
    - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PyMongo 
    
+![](/images/Covid-19.PNG)
 
 ## Big Data - Spark - Python
-### [Project 3: How did the change in the movements in the transit stations has impacted the new Covid-19 cases in Brazil and Australia? ](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
+### [Project 3: How did the change in the movements in the transit stations has impacted the new Covid-19 cases in Brazil and Australia? ](https://github.com/harjomand/Portfolio/blob/main/COVID19_Australia_Brazil.ipynb) 
 * A spark distributed dataframes is created . Spark is used to explore, filter, analyse two time-series. 
 
 * Techniques: 
@@ -41,8 +42,9 @@ Repository containing Data Science and Data Analytics projects.
    
 * Tools: 
    - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PySpark
-   
-
+  
+![](/images/Aus_Br.PNG)
+ 
 ## Multivariate Analysis for High-Dimensional Data with R
 ### [Project 4: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/harjomand/Portfolio/blob/main/Analysing-Eurogroup.pdf) 
 * Applying MANOVA, PCA Analysis, Factor Analysis and Parallel analysis on dependent variables which measure the percentage employment within different employment sectors. The independent variable is Group which is a factor that represents the country regions. 
