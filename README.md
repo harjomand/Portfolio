@@ -76,17 +76,17 @@ Repository containing Data Science and Data Analytics projects.
    
 
 ## Simulation with Python
-### [Project 5: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
+### [Project 6: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
 * Simulating a real-world scenario with Python: Comparing different checkout configuration and providing recommendation on the quickest checkout service.
-
+* Results: The express checkout should be adopted as it averages a lower checkout time compared to the other methods tested. From a theoretical point of view, having an express checkout is better and reduce the service time.
 * Tools: 
    - **Python**: modsim
 
 ![](/images/Express_Checkout.PNG)
 
 
-### [Project 6: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20Bike.ipynb)
-* Simulating a real-world scenario with Python. 
+### [Project 7: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20Bike.ipynb)
+* Simulating a real-world scenario with Python : developing a bikeshare model for Brisbane City Council(BCC) and predict the number of unhappy customers at each bike station at the end of each hour over the 24 hour period.
 
 * Tools: 
    - **Python**: modsim
