@@ -87,7 +87,7 @@ Repository containing Data Science and Data Analytics projects.
 * Tools: 
    - **Python**: modsim
 
-![](/images/Express_Checkout.PNG)
+![](/images/Express_Checkout_.PNG)
 
 
 ### [Project 7: Brisbane City Council Bike System](https://github.com/harjomand/Portfolio/blob/main/Brisbane%20-%20Bike.ipynb)
