@@ -78,6 +78,7 @@ Repository containing Data Science and Data Analytics projects.
 * Tools : 
    - **R**: yacca,lattice,caret,MASS, and ade4
    
+![](/images/Cluster_Dendorogram.PNG)
 
 
 ## Simulation with Python
