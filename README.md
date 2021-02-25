@@ -19,6 +19,32 @@ Repository containing Data Science and Data Analytics projects.
    
 ![](/images/RandomForest.PNG)
 
+## Big Data - NoSQL Database - Python
+### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
+* By utilizing the Amazon Web Services a NoSQL database is created then the NoSQL database is queried and is analysed to answer the research question.  
+
+* Techniques: 
+   - AWS Cloud
+   - NoSQL 
+   - PyMongo
+   
+* Tools: 
+   - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PyMongo 
+   
+
+## Big Data - Spark - Python
+### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
+* By utilizing the Amazon Web Services a NoSQL database is created then the NoSQL database is queried and is analysed to answer the research question.  
+
+* Techniques: 
+   - AWS Cloud
+   - NoSQL 
+   - PyMongo
+   
+* Tools: 
+   - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PyMongo 
+   
+
 
 ## Multivariate Analysis for High-Dimensional Data with R
 ### [Project 2: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/harjomand/Portfolio/blob/main/Analysing-Eurogroup.pdf) 
