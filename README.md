@@ -17,7 +17,7 @@ Repository containing Data Science and Data Analytics projects.
    - **Python**: Pandas,Numpy,Sklearn,Matplotlib,Seaborn,Keras,and Pytorch 
    
 ![](/images/RandomForest.PNG)
-
+                            *************************************
 ## Big Data 
 ### [Project 2: How did the imposed restriction policies during the second wave of COVID-19 in Melbourne effect the population mobility trends?](https://github.com/harjomand/Portfolio/blob/main/Covid-19-Melbourne.ipynb) 
 * By utilizing the Amazon Web Services a NoSQL database is created then the NoSQL database is queried and is analysed to answer the research question.  
@@ -45,6 +45,7 @@ Repository containing Data Science and Data Analytics projects.
    - **Python**: Pandas,Numpy,Matplotlib,Seaborn,datetime,PySpark
   
 ![](/images/Aus_Br.PNG)
+                                                         ******************
  
 ## Multivariate Analysis for High-Dimensional Data with R
 ### [Project 4: Multivariate Analysis - Percentage of Employment in Different Industries By Different Regions](https://github.com/harjomand/Portfolio/blob/main/Analysing-Eurogroup.pdf) 
