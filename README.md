@@ -59,7 +59,7 @@ Repository containing Data Science and Data Analytics projects.
    
 ![](/images/Parallel_Analysis_Scree_Plots.PNG)
 
-### [Project 5: Multivariate Analysis - Analysing The Relationship Between Student's Psychological Variables and Their Academic Grades](https://github.com/) 
+### [Project 5: Multivariate Analysis - Analysing The Relationship Between Student's Psychological Variables and Their Academic Grades](https://github.com/harjomand/Portfolio/blob/main/Psychological-Variables-and-Academic-Grades.pdf) 
 * Multivariate Analysis for High-Dimensional Data . Applying Canonical Correlation Analysis (CCA) , Discriminant Function Analysis (DFA) , and Cluster Analysis on the Dataset. 
 * Results: I realized that there are a range of correlations (all positive) within and between psychological and the academic variables sets. They all have moderate correlation.Also, we realized that students who have less control and motivation are associated with students who have low academics in english , maths , history and biology. But the analysis really has not been that successful and possibly those initial correlation matrices should warn us because we had a lot of really low correlation in the Psychological matrix which was a concern. Its possible that our assumption of MVN was a mistake and maybe if we test, it won’t fit a Multivariate normality.
 
