@@ -35,7 +35,7 @@ Repository containing Data Science and Data Analytics projects.
 ![](/images/Covid-19.PNG)
 
 
-### [Project 3: How did the change in the movements in the transit stations has impacted the new Covid-19 cases in Brazil and Australia? ](https://github.com/harjomand/Portfolio/blob/main/COVID19_Australia_Brazil.ipynb) 
+### [Project 3: How did the change in the movements in the transit stations impact the new Covid-19 cases in Brazil and Australia? ](https://github.com/harjomand/Portfolio/blob/main/COVID19_Australia_Brazil.ipynb) 
 * A spark distributed dataframes is created . Spark is used to explore, filter, analyse two time-series. 
 * Results: There were two peaks to Australia, one in April 2020 and one in August 2020. For Australia, the number of new cases has dropped significantly since August 2020. Australia has managed the pandemic very well. On the other hand, for Brazil, we can see a very volatile graph. The peak for Brazil was in January 2021 after the new year holidays. The movement in stations in Brazil increased in November 2020 which led to increase in number of new cases in January 2021. The imposed restrictions have impacted the transit stations movements from baseline in Australia and Brazil in different ways. The movement in the stations reduced in Australia and Brazil significantly in March 2020 but it has increased for Brazil since then. For Brazil, the movement in stations has passed the baseline in November 2020 which led to a peak in number of new cases in January 2021. For Australia , the movement in stations has dropped significantly in March 2020 and has not got back to normal and the number of new cases has been very less since the second wave in August 2020.
 
