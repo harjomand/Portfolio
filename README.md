@@ -81,7 +81,7 @@ Repository containing Data Science and Data Analytics projects.
 ![](/images/Cluster_Dendorogram.PNG)
 
 
-## Simulation with Python
+## Prescriptive Analytics - Simulation with Python
 ### [Project 6: Express Checkout Simulation](https://github.com/harjomand/Portfolio/blob/main/Express%20Checkout%20Simulation%20with%20Python%20.ipynb)
 * Simulating a real-world scenario with Python: Comparing different checkout configuration and providing recommendation on the quickest checkout service.
 * Results: The express checkout should be adopted as it averages a lower checkout time compared to the other methods tested. From a theoretical point of view, having an express checkout is better and reduce the service time.
