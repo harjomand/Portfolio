@@ -1,4 +1,4 @@
-# Data Science Portfolio
+# Data Analytics Portfolio
 Repository containing Data Science and Data Analytics projects. 
 
 ## Predictive Analytics - Machine Learning & Deep Learning with Python
