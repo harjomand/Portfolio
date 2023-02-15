@@ -24,7 +24,7 @@ Repository containing Data Science and Data Analytics projects.
 * By utilizing the Amazon Web Services (AWS) a NoSQL database is created . The NoSQL database is queried and is analysed to answer the research question.  
 * Results: People really obeyed the rules in Melbourne and as the result of that the restrictions were eases on 26th of October 2020. I saw a rapid drop in March and June in all different sections. People followed the rule, practiced social distancing and avoided optional and not important travels.
 
-* Techniques: 
+* Techniques:
    - AWS Cloud
    - NoSQL 
    - MongoDB
