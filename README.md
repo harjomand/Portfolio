@@ -2,7 +2,7 @@
 Repository containing Data Science and Data Analytics projects. 
 
 ## Predictive Analytics - Machine Learning & Deep Learning with Python
-### [Project 1:Prospective Cross-Sell and Up-Sell Opportunities in Customers?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
+### [Project 1: Prospective Cross-Sell and Up-Sell Opportunities in Customers?](https://github.com/harjomand/Portfolio/blob/main/How_to_Identify_Potential_Cross_sell_And_Up_sell_Customers.ipynb) 
 * Explanatory data analytics, Feature Engineering, Feature Importance, Supervised Machine Learning (Logistic Regression, Decision Tree, and Random Forest), Multilayer Perceptrons (MLP), K-means, Autoencoder in Pytorch, and PCA .   
 * Benchmark: The benchmark was Logistic regression and it produced 0.7694 AUC on Test dataset.
 * Results: By utilizing Random Forest and hyper tuning the parameters, the 0.8025 AUC was achieved. 
