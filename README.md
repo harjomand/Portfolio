@@ -68,7 +68,7 @@ Repository containing Data Science and Data Analytics projects.
 ### [Project 5: Multivariate Analysis: Exploring the Correlation Between Students' Psychological Factors and Academic Performance](https://github.com/harjomand/Portfolio/blob/main/Psychological-Variables-and-Academic-Grades.pdf) 
 * Multivariate Analysis for High-Dimensional Data . Applying Canonical Correlation Analysis (CCA) , Discriminant Function Analysis (DFA) , and Cluster Analysis on the Dataset. 
 * Results: I discovered a series of positive correlations within and between the psychological and academic variable sets, all of which exhibited moderate strength. Additionally, it became apparent that students with lower levels of self-control and motivation tend to perform poorly in subjects like English, math, history, and biology.However, it is essential to note that the analysis did not yield the desired results. The initial correlation matrices hinted at concerns, particularly the numerous low correlations within the psychological matrix. This leads us to consider the possibility that our assumption of multivariate normality (MVN) may have been misguided, and further testing might reveal that the data does not conform to a multivariate normal distribution.
-* 
+  
 * Techniques: 
    - Canonical Correlation Analysis (CCA) 
    - Discriminant Function Analysis (DFA) 
